@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Assignment Tracker - TrackAssign</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <h2 class="logo">TrackAssign<span>.</span></h2>
+        <p class="sidebar-label">View your Assignments</p>
+        <nav>
+            <a href="#top" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="sidebar-footer">
+            Your Assignments, organized.
+        </div>
+    </aside>
+    <main class="main-content" id="top">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">YOUR ASSIGNMENTS</p>
+                <h1>Dashboard</h1>
+            </div>
+            <div class="profile">
+                <div class="avatar">M</div>
+                <span>Workspace</span>
+            </div>
+        </header>
+        <section class="welcome">
+            <p class="eyebrow">YOUR DAY, YOUR PACE</p>
+            <h2>Make today count. 🌱</h2>
+            <p>Keep track of your assignments.</p>
+        </section>
+        <section class="stats-grid">
+            <article class="stat-card">
+                <p>Total Assignments</p>
+                <h2 id="totalAssignments">0</h2>
+                <span>All your assignments</span>
+            </article>
+        </section>
+        <section class="content-grid">
+            <article class="panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">STAY ON TRACK</p>
+                        <h2>Upcoming Assignments</h2>
+                    </div>
+                    <button id="addAssignmentBtn" type="button">+ Add New</button>
+                </div>
+                <form id="assignmentForm" class="assignment-form" hidden>
+                    <label for="assignmentTitle">Assignment Title</label>
+                    <input type="text" id="assignmentTitle" placeholder="e.g. E.S.E. ASSIGNMENT 1" required>
+                    <label for="assignmentSubject">Subject</label>
+                    <input type="text" id="assignmentSubject" placeholder="e.g. ESE" required>
+                    <label for="assignmentDueDate">Due Date</label>
+                    <input type="date" id="assignmentDueDate" required>
+
+                    <button type="submit">Save Assignment</button>
+                </form>
+                <div id="assignmentList">
+                    <p class="empty-state">No assignments yet. Add your first one!</p>
+                </div>
+            </article>
+        </section>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Manage Your Assignments Easily</h1>
+                <p>
+                    Organize your assignments, track deadlines, and stay on top of your academic tasks.
+                </p>
+                <button id="getStarted" type="button">Get Started</button>
+            </div>
+            <div class="container" id="container">
+                <div class="form-container panel-add">
+                    <form id="quickForm">
+                        <h1>Add Assignment</h1>
+                        <span>Quickly add a new task</span>
+                        <input type="text" id="qTitle" placeholder="Assignment Title" required>
+                        <input type="text" id="qSubject" placeholder="Subject" required>
+                        <input type="date" id="qDue" required>
+                        <select id="qPriority" required>
+                            <option value="">Select Priority</option>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                        <button type="submit">Add Assignment</button>
+                    </form>
+                </div>
+                <div class="form-container panel-list">
+                    <div id="deadlineBox" class="deadline-box">
+                        <h1>Upcoming Deadlines</h1>
+                        <span>Your next pending assignments</span>
+                        <ul id="deadlineList"></ul>
+                        <button type="button" id="dashboardBtn">Open Dashboard</button>
+                    </div>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <h1>Add More?</h1>
+                            <p>Go back and add another assignment to your list.</p>
+                            <button class="hidden" id="showAdd" type="button">Add Assignment</button>
+                        </div>
+                        <div class="toggle-panel toggle-right">
+                            <h1>Hello, Student!</h1>
+                            <p>Add your assignments and never miss a deadline.</p>
+                            <button class="hidden" id="showDeadlines" type="button">View Deadlines</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="panel">
+            <div class="about-content">
+                <h2 class="heading-content">About Assignment Tracker</h2>
+                <p class="para1-content">
+                    Assignment Tracker is a simple and user-friendly web application designed to help students manage their assignments efficiently.
+                </p>
+                <p class="para2-content">
+                    Students can add assignments, set due dates and priorities, track pending and completed work, and easily manage their academic tasks in one place.
+                </p>
+                <div class="about-features">
+                    <div class="feature-box">
+                        <h3>📚 Organize</h3>
+                        <p>Keep all your assignments organized in one place.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>⏰ Track Deadlines</h3>
+                        <p>Keep track of upcoming and overdue assignments.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>✅ Stay Productive</h3>
+                        <p>Mark tasks as completed and stay on top of your work.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="panel">
+            <h2 class="contact-heading">Connect me on Social Media</h2>
+            <ul class="contact-list">
+                <li><a href="https://github.com/anassk-cell" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/muhammad-anas-shaikh-0b1575391" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        TrackAssign · Learn, plan, grow.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
